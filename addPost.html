@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+	<meta charset="utf-8">
+	<title>Add Blog</title>
+	<link rel="stylesheet" href="reset.css" type="text/css"/>
+	<link rel="stylesheet" href="addPost.css" type="text/css"/>
+	</head>
+
+<body>
+	<nav>
+	<a href="index.php">Back to Homepage</a>
+	</nav>
+	<div class = "container"> <!Main Block>
+
+	<form method="POST" action="addPost.php" id = "addPostForm">
+		<label>Add Blog</label>
+		<p><input class ="blog" type="text" id = "title" name= "title" placeholder = "Title"> </p>
+		<p><textarea rows = 8 class = "blog" id = "blog" name = "blogText" placeholder = "Enter your text here"></textarea></p>
+		<button type = 'button' id = "clear" onclick = 'clearFunction(this)'>Clear</button>
+		<button type='submit' value= 'Submit' id = 'post'>Submit</button>
+		<button type ='submit' name = 'preview' value = 'preview' formaction ='/webroot/finalWebMini/viewBlog.php' autocomplete="on">Preview</button>
+	</form>
+	</div> <!END container>
+
+<script type = "text/javascript">
+	window.onload=function(){ //make sure DOM is loaded before getting its properties
+
+		var form = document.getElementById('addPostForm');
+		form.addEventListener('submit', addPostHandler);
+
+		function addPostHandler(element){
+			var title = document.getElementById("title");
+			var blogText = document.getElementById("blog");
+
+			if(title.value === ""|| title.value == null){
+				window.alert("Title: Text required");
+				title.style.background = "#FCE3E0 ";
+				element.preventDefault(); //prevent default action of submitting post
+			}
+			if(blogText.value === ""|| blogText.value == null){
+				window.alert("Blog: Text required");
+				blogText.style.background = "#FCE3E0";
+				element.preventDefault();
+			}
+		}
+	}
+
+	function clearFunction(element){
+		var confirmPress = window.confirm("Are you sure you want to clear your post?");
+		if (confirmPress == false){ //if Cancel is clicked
+		//	window.alert("Cancel is clicked");
+		}
+		else{ //OK clicked
+			document.getElementById("addPostForm").reset(); //different way to reset instead of preventDefault
+		}
+	}
+</script>
+
+</body>
+</html>

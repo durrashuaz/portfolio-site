@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+	<meta charset="utf-8">
+	<title>Login Page</title>
+	<link rel="stylesheet" href="reset.css" type="text/css"/>
+	<link rel="stylesheet" href="login.css" type="text/css"/>
+	</head>
+
+<body>
+	<header>
+		<nav>
+		<a href="index.php">Back to Homepage</a>
+		<a href="viewBlog.php">Blog Posts</a>
+		</nav>
+	</header>
+
+	<form method="POST" action="signUp.php" id = "signUpForm">
+		<div class = "container"> <!Main Block>
+		<label id = "title">Sign Up</label>
+			<p>
+				<input type="text" id = "username" name= "username" placeholder = "Username" required>
+			</p>
+			<p>
+				<input type="text" name= "name" placeholder = "Name" required>
+			</p>
+			<p>
+				<input type="email" name= "email" id = "Email" placeholder = "Email" required>
+			</p>
+			<p>
+				<input type = "password" name = "password" placeholder = "Password"  minlength = "7" required>
+			 </p>
+			<div class = "passReq">
+				 <p>Password: minimum 7 characters</p>
+			</div>
+			<input class="button" name = "Submit" id = 'Submit' value= 'Sign up' type = 'submit'>
+
+		</div> <!END container>
+	</form>
+	<p>Already have an account? <a href="login.html">Login.</a></p>
+</body>
+</html>
+
