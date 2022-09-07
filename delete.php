@@ -52,6 +52,7 @@ if(isset($_POST['commentID'])){ //delete request is a comment
 
 	//query successful
 		header('Location: /webroot/finalWebMini/viewBlog.php');
+		//test
 }
 
 ?>
