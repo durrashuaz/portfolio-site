@@ -13,15 +13,10 @@ if(isset($_POST['commentID'])){ //delete request is a comment
 }
 
 //Form connection with database
-//$dbuser = "user";
-//$dbhost = "10.131.23.76"; //ip address
-//$dbpass = "password";
-//$dbname = "ecs417";
-
-$dbhost = getenv("MYSQL_SERVICE_HOST");
-$dbuser = getenv("DATABASE_USER");
-$dbpass = getenv("DATABASE_PASSWORD");
-$dbname = getenv("DATABASE_NAME");
+$dbhost = "localhost:3306";
+$dbuser = "durrashu_admin";
+$dbpass = "Deeznuts42069@";
+$dbname = "durrashu_portfolio";
 
 //Creates connection
 $conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
