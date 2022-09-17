@@ -6,16 +6,11 @@
 //if (isset($_SESSION['user'])){//
 //	if($_SESSION['user'] === "admin"){//only admins can post blogs (incase user types in addPost URL) //
 
-//Set server info variables
-//$dbuser = "user";
-//$dbhost = "10.131.23.76"; //ip address
-//$dbpass = "password";
-//$dbname = "ecs417";
-
-$dbhost = getenv("MYSQL_SERVICE_HOST");
-$dbuser = getenv("DATABASE_USER");
-$dbpass = getenv("DATABASE_PASSWORD");
-$dbname = getenv("DATABASE_NAME");
+//Form connection with database
+$dbhost = "localhost:3306";
+$dbuser = "durrashu_admin";
+$dbpass = "Deeznuts42069@";
+$dbname = "durrashu_portfolio";
 
 //Creates connection
 $conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname);

@@ -17,16 +17,11 @@ $username = $_POST['username'];
 $name = $_POST['name'];
 $commentText = $_POST['commentText'];
 
-//Creates connection
-//$dbuser = "user";
-//$dbhost = "10.131.23.76"; //ip address
-//$dbpass = "password";
-//$dbname = "ecs417";
-
-$dbhost = getenv("MYSQL_SERVICE_HOST");
-$dbuser = getenv("DATABASE_USER");
-$dbpass = getenv("DATABASE_PASSWORD");
-$dbname = getenv("DATABASE_NAME");
+//Form connection with database
+$dbhost = "localhost:3306";
+$dbuser = "durrashu_admin";
+$dbpass = "Deeznuts42069@";
+$dbname = "durrashu_portfolio";
 
 $conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 
@@ -40,7 +35,7 @@ $format = 'jS F Y, G:i e';
 date_default_timezone_set('UTC');
 $dateTime = date($format);
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 	//insert all comment information into database
 $sql = mysqli_query($conn,"INSERT INTO comments (postID, username, name, dateTime, comment) VALUES ( '$postID', '$username' ,'$name', '$dateTime', '$commentText')")
@@ -50,5 +45,12 @@ $sql = mysqli_query($conn,"INSERT INTO comments (postID, username, name, dateTim
 		header('Location: /webroot/finalWebMini/viewBlog.php');
 //}
 }
+
+$hello, my name is D
+
+
+
+
+Hello, World 
 
 ?>

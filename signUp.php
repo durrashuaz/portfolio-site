@@ -13,11 +13,6 @@ $dbuser = "durrashu_admin";
 $dbpass = "Deeznuts42069@";
 $dbname = "durrashu_portfolio";
 
-// $dbhost = getenv("MYSQL_SERVICE_HOST");
-// $dbuser = getenv("DATABASE_USER");
-// $dbpass = getenv("DATABASE_PASSWORD");
-// $dbname = getenv("DATABASE_NAME");
-
 //Creates connection
 $conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 
