@@ -9,6 +9,7 @@ session_start();
 //else{
 //echo $_SESSION['status'];
 //echo $_SESSION['messagePostID'];
+//ad test
 
 //get postID & (user)name from hidden input field of comment form
 //get comment input from user
