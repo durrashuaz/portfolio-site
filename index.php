@@ -41,7 +41,7 @@
 				<figure>
 	 		<img src= 'durraPic3.jpeg' width="245" height="300" title = "Durra Shuazlan"> <br /> <figcaption><i>Durra Shuazlan</i></figcaption>
 	 		</figure>
-		<h3 id="about-myself" class = "label"> About Myself </h3>
+		<h3 id="about-myself" class = "label"> About Myself Testing </h3>
 		<p>My name is Durra Shuazlan and I am a first year student in Queen Mary University of London studying Computer Science with Management (ITMB). Interested in technology and business, I aim to apply my knowledge in both fields to be of a valuable contribution to the technology industry. You can hopefully learn more about me and interact with me through this website! You can also create your own account to comment on my Blog Posts, check them out!</p>
 	 </div>
  </section>
