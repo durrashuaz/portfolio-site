@@ -24,7 +24,7 @@ if ($conn->connect_error) {
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
-$sql = mysqli_query($conn,"SELECT * FROM USERLOG")
+$sql = mysqli_query($conn,"SELECT * FROM userlog")
 	or die("Query unsuccessful " . mysql_error());
 $loginUnsuccessful = false;
 	//query successful
@@ -34,7 +34,7 @@ $loginUnsuccessful = false;
 			if($email === $rows['email'] && $password === $rows['password']){ //login matches data
 
 				$loginUnsuccessful = false;
-				session_start(); //session starts
+				session_start();
 				$_SESSION["name"] = $rows['name']; //store their name
 				$_SESSION["username"] = $rows['username']; //store their username
 
