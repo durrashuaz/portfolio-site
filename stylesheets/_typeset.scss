@@ -1,0 +1,67 @@
+%h1,
+.h1 {
+    font-size: 56px;
+    line-height: 58px;
+    @media( max-width: $d ) {
+        font-size: 44px;
+    }
+    @media( max-width: $h ) {
+        font-size: 40px;
+        line-height: initial;
+    }
+    &--mb {
+        margin-bottom: 3rem;
+    }
+}
+
+%h2,
+.h2 {
+    font-size: 28px;
+    @media( max-width: $d ) {
+        font-size: 24px;
+    }
+}
+
+%a,
+.a,
+a {
+    color: $color-link;
+    &:hover {
+        color: $color-hover;
+    }
+    &:visited {
+        color: initial;
+    }
+}
+
+%content-text,
+.content-text {
+    font-size: 22px;
+    max-width: 60rem;
+    @media( max-width: $b ) {
+        font-size: 18px;
+        line-height: 1.6rem;
+    }
+}
+
+.post {
+    margin-bottom: 5rem;
+    h1 {
+        @extend %h1;
+        margin-bottom: 1rem;
+    }
+    h2 {
+        @extend %h2;
+        margin-bottom: 3rem;
+        @media( max-width: $h ) {
+            margin-bottom: 2rem;
+        }
+    }
+   div,
+   p {
+        @extend %content-text;
+        margin-bottom: 1rem;
+    }
+
+}
+

@@ -1,0 +1,187 @@
+.nav {
+    display: flex;
+    border-bottom: 1px solid $color-outline;
+    width: 100%;
+}
+
+.nav__logo {
+    @media( max-width: $h ) {
+        width: 120px;
+        height: 64px;
+    }
+}
+
+.nav__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 46px;
+    ul > li {
+        &:last-of-type {
+            margin-left: $grid-gutter-width;
+        }
+    }
+    ul {
+        padding-left: 0;
+    }
+}
+
+.nav__primary {
+    font-size: 22px;
+    margin-bottom: 0.5rem;
+}
+
+.nav__secondary {
+    font-size: 20px;
+}
+
+.nav__login {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-bottom: 0.5rem;
+    button {
+        font-size: 20px;
+        @media( max-width: $e ) {
+            font-size: 18px;
+        }
+        @media( max-width: $h ) {
+            font-size: 12.7px;
+        }
+    }
+    span {
+        &::before {
+            margin-left: 0.5rem;
+        }
+    }
+}
+
+.nav__links {
+    @media( max-width: $e ) {
+        display: none;
+    }
+}
+
+.nav__login-burger {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: end
+}
+
+.nav__inner {
+    @extend %container-header;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    @media( max-width: $e ) {
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav__burger {
+        display: none;
+        background-color: $color-dark-bg;
+        height: 46px;
+        width: 46px;
+        margin-bottom: 1rem;
+        align-self: flex-end;
+        @media( max-width: $e ) {
+            display: flex;
+            justify-content: center;
+        }
+        @media( max-width: $h ) {
+            height: 36px;
+            width: 36px;
+            margin-bottom: 0.5rem;
+        }
+        .icon-menu,
+        .icon-cross {
+            &::before {
+                font-size: 36px;
+            }
+            @media( max-width: $e ) {
+                display: flex;
+                align-items: center;
+            }
+            @media( max-width: $h ) {
+                &::before {
+                    font-size: 22px;
+                }
+            }
+        }
+        .icon-menu {
+            .nav-open & {
+                display: none;
+            }
+        }
+        .icon-cross {
+            display: none;
+            &::before {
+                font-size: 26px;
+            }
+            .nav-open & {
+                display: flex;
+            }
+        }
+    }
+    .nav-open & {
+        border: 0;
+        background-color: $white;
+        z-index: 2;
+    }
+}
+
+.nav__mobile {
+    display: none;
+}
+
+.nav-open {
+    @media( max-width: $e ) {
+        .nav__mobile {
+            display: block;
+            background-color: $color-nav;
+            position: relative;
+            height: 100vh;
+            .nav__mobile__link {
+                font-size: 46px;
+                letter-spacing: -0.19rem;
+                line-height: 62px;
+                color: $white;
+                position: absolute;
+                &--portfolio {
+                    top: 15%;
+                    right: 10%;
+                }
+                &--blog {
+                    top: 32%;
+                    left: 15%;
+                }
+            }
+            .nav__mobile__footer {
+                position: absolute;
+                top: 60%;
+                right: 2rem;
+                li {
+                    font-size: 26px;
+                    line-height: 42px;
+                    @media( max-width: $h ) {
+                        font-size: 22px;
+                        line-height: 32px;
+                    }
+                }
+            }
+        }
+        .nav {
+            display: block;
+            height: 100vh;
+            width: 100vw;
+            position: fixed;
+            overflow-y: scroll;
+            z-index: 2;
+        }
+        .nav__inner {
+            border: 0;
+            background-color: $color-nav;
+            width: unset;
+        }
+    }
+}
