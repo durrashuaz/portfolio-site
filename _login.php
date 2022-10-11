@@ -15,28 +15,34 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 	echo $email; echo $password;
 
 	//query successful
-	while( $rows = mysqli_fetch_assoc( $sql ) ){
-		if( $email === $rows['email'] && $password === $rows['password'] ){ //login matches data
+	if( $sql-> num_rows > 0 ){
+		echo "test1";
+		while( $rows = mysqli_fetch_assoc( $sql ) ){
+			echo "Test";
+			if( $email === $rows['email'] && $password === $rows['password'] ){ //login matches data
 
-			$loginUnsuccessful = false;
-			session_start();
+				$loginUnsuccessful = false;
+				session_start();
 
-			$_SESSION["name"] = $rows['name']; //store their name
-			$_SESSION["username"] = $rows['username']; //store their username
+				$_SESSION["name"] = $rows['name']; //store their name
+				$_SESSION["username"] = $rows['username']; //store their username
+				
+				echo $_SESSION["name"];
 
-			if( $rows['user'] === "guest" ){ //guest logs in
-				$_SESSION["status"] = "guest"; //status of user indicated
-				// header('Location: /webroot/finalWebMini/redirect.php');
+				if( $rows['user'] === "guest" ){ //guest logs in
+					$_SESSION["status"] = "guest"; //status of user indicated
+					// header('Location: /webroot/finalWebMini/redirect.php');
+				}
+				else if( $rows['user'] === "admin" ){
+					$_SESSION["status"] = "admin";
+					// header('Location: /webroot/finalWebMini/addPost.html');
+				}
+
+				//header('Location: /index.php');
 			}
-			else if( $rows['user'] === "admin" ){
-				$_SESSION["status"] = "admin";
-				// header('Location: /webroot/finalWebMini/addPost.html');
+			else{
+				$loginUnsuccessful = true;
 			}
-
-			//header('Location: /index.php');
-		}
-		else{
-			$loginUnsuccessful = true;
 		}
 	}
 	if ( $loginUnsuccessful ){
