@@ -32,12 +32,14 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 				if( $rows['user'] === "guest" ){ //guest logs in
 					$_SESSION["status"] = "guest"; //status of user indicated
 					// header('Location: /webroot/finalWebMini/redirect.php');
+					echo "admin";
 				}
 				else if( $rows['user'] === "admin" ){
 					$_SESSION["status"] = "admin";
+					echo "admin";
 					// header('Location: /webroot/finalWebMini/addPost.html');
 				}
-
+				echo $_SESSION["status"];
 				//header('Location: /index.php');
 			}
 			else{
