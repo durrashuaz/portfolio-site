@@ -1,0 +1,135 @@
+.about-home {
+    display: flex;
+    justify-content: center;
+    img {
+        margin-top: -6rem;
+        object-fit: contain;
+
+    }
+    @media ( max-width: $f ) {
+        flex-wrap: wrap;
+    }
+}
+
+.about-home__text {
+display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    @media ( max-width: $b ) {
+        margin-right: -5rem;
+    }
+    @media ( max-width: $d ) {
+        flex-direction: initial;
+    }
+    @media ( max-width: $f ) {
+        margin-right: 0;
+        justify-content: center;
+    }
+}
+
+.about-home__code {
+    font-family: $font-secondary;
+    font-size: 56px;
+    line-height: 58px;
+    margin-bottom: 0.25rem;
+    @media ( min-width: $x ) {
+        font-size: 69px;
+    }
+    @media ( max-width: $c ) {
+        font-size: 48px;
+    }
+    @media ( max-width: $h ) {
+        font-size: 42px;
+        line-height: 46px;
+    }
+}
+
+.about-home__name {
+    font-size: 56px;
+    line-height: 50px;
+    margin-bottom: 1rem;
+    @media ( min-width: $x ) {
+        font-size: 69px;
+        line-height: 66px;
+    }
+    @media ( max-width: $c ) {
+        font-size: 48px;
+    }
+    @media ( max-width: $h ) {
+        font-size: 40px;
+        line-height: 40px;
+    }
+}
+
+.about-home__summary {
+    font-size: 20px;
+    line-height: 32px;
+    a {
+        color: $color-link;
+    }
+    @media ( min-width: $x ) {
+        font-size: 26px;
+        line-height: 35px;
+    }
+    @media ( max-width: $c ) {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .enlarged {
+        display: inline;
+        font-size: 26px;
+        font-weight: 500;
+        @media ( min-width: $x ) {
+            font-size: 32px;
+        }
+        @media ( max-width: $c ) {
+            font-size: 20px;
+        }
+    }
+}
+
+.about-home__image {
+    display: flex;
+    position: relative;
+    filter: grayscale( 15% );
+    @media ( max-width: $f ) {
+        margin-top: 4rem;
+    }
+    img {
+        @media ( min-width: $x ) {
+            width: 90%;
+        }
+        @media ( max-width: $e ) {
+            width: 313px;
+        }
+    }
+    .about-home__image__socials {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 18.5%;
+        right: 0;
+        @media ( min-width: $x ) {
+            right: 12.5%;
+        }
+        @media ( max-width: $f ) {
+            top: 6.5%;
+        }
+        .cv-hover {
+            display: none;
+        }
+        span {
+            &::before {
+                color: $color-icons-social;
+                display: block;
+                margin-bottom: 1rem;
+                font-size: 40px;
+                &:hover {
+                    .cv-hover {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
