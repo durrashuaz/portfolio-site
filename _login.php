@@ -39,17 +39,17 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 					echo "admin";
 					// header('Location: /webroot/finalWebMini/addPost.html');
 				}
-				echo $_SESSION["status"];
-				echo $_SESSION["name"];
+				echo "status: ". $_SESSION["status"];
+				echo "name:" . $_SESSION["name"];
 				//header('Location: /index.php');
 			}
 			else{
 				$loginUnsuccessful = true;
 			}
 		}
-	}
-	if ( $loginUnsuccessful ){
-		echo "<p> Login Unsuccessful. <a href='javascript:history.back()'>Try again</a> or go back to <a href='/'>Homepage</a>.</p>";
+		if ( $loginUnsuccessful ){
+			echo "<p> Login Unsuccessful. <a href='javascript:history.back()'>Try again</a> or go back to <a href='/'>Homepage</a>.</p>";
+		}
 	}
 
 	$conn->close();
