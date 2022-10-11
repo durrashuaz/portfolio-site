@@ -1,15 +1,15 @@
 <?php
 
 //Form connection with database
-// $dbhost = "localhost:3306";
-// $dbuser = "durrashu_admin";
-// $dbpass = "Deeznuts42069@";
-// $dbname = "durrashu_portfolio";
+$dbhost = "localhost:3306";
+$dbuser = "durrashu_admin";
+$dbpass = "Deeznuts42069@";
+$dbname = "durrashu_portfolio";
 
-$dbhost = "localhost";
-$dbuser = "root";
-$dbpass = "mysql";
-$dbname = "portfolio";
+// $dbhost = "localhost";
+// $dbuser = "root";
+// $dbpass = "mysql";
+// $dbname = "portfolio";
 
 ///Creates connection
 $conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
