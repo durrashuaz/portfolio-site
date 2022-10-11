@@ -12,7 +12,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 		or die( "Query unsuccessful " . mysql_error() );
 
 	$loginUnsuccessful = false;
-	// echo $email; echo $password;
+	echo $email; echo $password;
 
 	//query successful
 	while( $rows = mysqli_fetch_assoc( $sql ) ){
