@@ -1,0 +1,43 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, figure, nav, footer {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+
+textarea {
+    font-family: $font-primary;
+}
+
+button {
+    font-family: $font-primary;
+    background: none;
+    border: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    color: initial;
+    text-decoration: none;
+    &:visited {
+        color: initial;
+    }
+}
+
+th {
+    text-align: left;
+}
+

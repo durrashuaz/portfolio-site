@@ -1,0 +1,18 @@
+.grid {
+    margin-left: $grid-gutter-width * -1;
+    .grid__item {
+        padding-left: $grid-gutter-width;
+    }
+    &--m {
+        margin-left: $grid-gutter-width--m * -1;
+        .grid__item {
+            padding-left: $grid-gutter-width--m;
+        }
+    }
+    .nav__login-burger & {
+        margin-left: 0.5rem * -1;
+        .grid__item {
+            padding-left: 0.5rem;
+    }
+    }
+}

@@ -1,0 +1,13 @@
+.footer {
+    font-size: 20px;
+    line-height: 32px;
+    border-top: 1px solid $color-outline;
+}
+
+.footer__inner {
+    @extend %container-header;
+}
+
+.footer__secondary {
+    font-size: 14px;
+}

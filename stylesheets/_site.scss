@@ -1,0 +1,33 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.signUp-open,
+.nav-open,
+.login-open {
+    overflow: hidden;
+}
+
+
+.bg {
+    &--light {
+        background-color: $bg-light;
+    }
+    &--featured {
+        background-color: $bg-feature;
+    }
+    &--comments {
+        background-color: $bg-comments;
+    }
+    &--lines1 {
+        background-image: url( '../../images/lines1.png ');
+        background-size: 110%;
+    }
+    .signUp-open &,
+    .login-open & {
+        background: rgba( 0, 0, 0, 0.6 );
+        // .section {
+        //     background: rgba( 0, 0, 0, 0.6 );
+        // }
+    }
+}
