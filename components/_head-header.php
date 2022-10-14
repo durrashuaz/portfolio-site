@@ -4,6 +4,7 @@
    <link rel="stylesheet" href="../stylesheets/final/main.css"/>
    <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,400&display=swap');</style>
    <style>@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');</style>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
