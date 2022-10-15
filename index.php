@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<?php require 'components/_head-header_2.php' ?>
+<?php require '_head-header_2.php' ?>
 
 <div class="bg bg--featured bg--lines1">
     <div class="section section--about">

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <?php
-require "components/_head-header_2.php";
+require "_head-header_2.php";
 ?>
 
 <div class='bg bg--light bg--lines1'>
