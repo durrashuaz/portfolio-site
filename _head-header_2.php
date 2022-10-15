@@ -10,14 +10,13 @@
 
 <?php
 
-include '../includes/connect.php'; //if file inside another folder
-//include 'includes/connect.php'; //if file in no specific folder
+include 'includes/connect.php'; //if file in no specific folder
 
 $uri_path = parse_url( $_SERVER['REQUEST_URI'], PHP_URL_PATH );
 $uri_segments = explode( '/', $uri_path );
 $first_url_segment = $uri_segments[1];
 
-if( $first_url_segment === "index.php" || $first_url_segment === "" ) {
+if( $first_url_segment === "index.php" || $first_url_segment === "" ){
     echo "<div class='bg bg--featured bg--lines1'>";
 } else {
     echo "<div class='bg bg--light bg--lines1'>";

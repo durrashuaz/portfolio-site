@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<?php require 'components/_head-header.php' ?>
+<?php require 'components/_head-header_2.php' ?>
 
 <div class="section">
     <div class="container">
