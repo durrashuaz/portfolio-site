@@ -26,8 +26,6 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 				$_SESSION["name"] = $rows['name']; //store their name
 				$_SESSION["username"] = $rows['username']; //store their username
 
-
-
 				if( $rows['user'] === "guest" ){ //guest logs in
 					$_SESSION['status'] = "guest"; //status of user indicated
 					// header('Location: /webroot/finalWebMini/redirect.php');
