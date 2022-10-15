@@ -5,7 +5,7 @@
 ?>
 <!DOCTYPE html>
 <html>
-<?php require '_head-header_2.php' ?>
+<?php require 'head-header-2.php' ?>
 
 <div class="section">
     <div class="container">

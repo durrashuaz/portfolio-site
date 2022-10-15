@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <?php
-require "_head-header_2.php";
+require "head-header-2.php";
 ?>
 
 <div class='bg bg--light bg--lines1'>

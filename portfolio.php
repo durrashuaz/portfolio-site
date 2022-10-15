@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <?php
-require "_head-header_2.php";
+require "head-header-2.php";
 
 $posts = mysqli_query( $conn, "SELECT * FROM projects" )
 or die( "Query unsuccessful" . mysqli_error( $conn ) );
