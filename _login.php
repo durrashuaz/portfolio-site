@@ -35,6 +35,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 				}
 
 				echo "status: ". $_SESSION['status'];
+				header('Location: /');
 			}
 			else {
 				$loginUnsuccessful = true;

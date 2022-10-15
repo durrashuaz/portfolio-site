@@ -16,9 +16,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	//query: get existing user info in database
 	$sql = mysqli_query($conn,'SELECT * FROM userlog')
 		or die("Query unsuccessful " . mysqli_error($conn));
-	
+
 		$credentialsExist = false;
-	
+
 		if( $sql -> num_rows > 0 ){  //if table has row(s)
 		while( $rows = mysqli_fetch_assoc( $sql ) ){
 			if( $credentialsExist == false ){
@@ -40,8 +40,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 					//insert sign up info into userlog table
 					$sql = mysqli_query($conn,"INSERT INTO userlog (user, username, name, email, password) VALUES ('$userStatus', '$username', '$name', '$email', '$password')")
 					or die("Query unsuccessful " . mysqli_error());
-					//query successful
-					//header('Location: /webroot/finalWebMini/index.php');
+					//automatic login
+
+					$_SESSION["name"] = $name; //store their name
+					$_SESSION["username"] = $username; //store their username
+					$_SESSION['status'] = $userStatus; //status of user indicated
+					
+					$loginUnsuccessful = false;
+					//user signed up and logged in
+					header('Location: /');
 				}
 			}
 		}
