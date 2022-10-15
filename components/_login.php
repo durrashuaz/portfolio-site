@@ -18,7 +18,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 	if( $sql-> num_rows > 0 ){
 
 		while( $rows = mysqli_fetch_assoc( $sql ) ){
-			if( $email === $rows['email'] && $password === $rows['password'] ){ //login matches data
+			if( $email === $rows['email'] && $password === $rows['password'] && $loginUnsuccessful == false; ){ //login matches data
 				
 				$loginUnsuccessful = false;
 				session_start();
