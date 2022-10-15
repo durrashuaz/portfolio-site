@@ -47,6 +47,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 			echo "<p> Login Unsuccessful. <a href='javascript:history.back()'>Try again</a> or go back to <a href='/'>Homepage</a>.</p>";
 		}
 	}
+	exit();
 
 	$conn->close();
 }
