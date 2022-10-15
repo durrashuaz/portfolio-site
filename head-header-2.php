@@ -27,8 +27,12 @@ $uri_segments = explode( '/', $uri_path );
 $url_segment_1 = $uri_segments[1];
 $url_segment_2 = $uri_segments[2];
 
-echo $url_segment_1;
-echo $url_segment_2;
+if($url_segment_1){
+    echo $url_segment_1;
+}
+if($url_segment_2){
+    echo $url_segment_2;
+}
 
 if( $url_segment_1 === "index.php" || $url_segment_1 === "" ){
     echo "<div class='bg bg--featured bg--lines1'>";
