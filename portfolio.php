@@ -22,12 +22,12 @@
                         while( $rows = mysqli_fetch_assoc( $posts ) ){
                             $title_path = str_replace( " ", "-", $rows["title"] );
                             $title_path = $title_path . ".php";
-                            if( file_exists( $title_path ) ) { //if post in db can be found in files ?>
-                                <tr>
-                                    <td><a href="<?php echo $title_path ?>"><?php echo $rows["title"] ?></a></td>
-                                    <td><?php echo $rows["organisation"] ?></td>
-                                    <td><?php echo $rows["dateTime"] ?></td>
-                                </tr>
+                            if( file_exists( $title_path ) ) { //if post in db can be found in files
+                                echo "<tr>
+                                    <td><a href="$title_path">$rows['title']</a></td>
+                                    <td>$rows['organisation']</td>
+                                    <td>$rows['dateTime']</td>
+                                </tr>";
                             <?php
                             }
                         }
