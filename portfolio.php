@@ -25,9 +25,9 @@
                             if( file_exists( $title_path ) ) { //if post in db can be found in files
                                 echo
                                 "<tr>
-                                    <td><a href="$title_path">$rows['title']</a></td>
-                                    <td>$rows['organisation']</td>
-                                    <td>$rows['dateTime']</td>
+                                    <td><a href=" . $title_path . ">" . $rows['title'] . "</a></td>
+                                    <td>" . $rows['organisation'] . "</td>
+                                    <td>" . $rows['dateTime'] . "</td>
                                 </tr>";
                             }
                         }
