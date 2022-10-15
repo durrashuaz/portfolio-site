@@ -23,12 +23,12 @@
                             $title_path = str_replace( " ", "-", $rows["title"] );
                             $title_path = $title_path . ".php";
                             if( file_exists( $title_path ) ) { //if post in db can be found in files
-                                echo "<tr>
+                                echo
+                                "<tr>
                                     <td><a href="$title_path">$rows['title']</a></td>
                                     <td>$rows['organisation']</td>
                                     <td>$rows['dateTime']</td>
                                 </tr>";
-                        
                             }
                         }
                         ?> 
