@@ -8,7 +8,7 @@ $password = $_POST["password"];
 
 if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 
-	$sql = mysqli_query( $conn,"SELECT * FROM userlog" )
+	$sql = mysqli_query( $conn, "SELECT * FROM userlog" )
 		or die( "Query unsuccessful " . mysql_error() );
 
 	$loginUnsuccessful = false;
@@ -16,17 +16,18 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 
 	//query successful
 	if( $sql-> num_rows > 0 ){
-		echo "test1";
+
 		while( $rows = mysqli_fetch_assoc( $sql ) ){
-			echo "Test";
+			
 			if( $email === $rows['email'] && $password === $rows['password'] ){ //login matches data
 
+				echo "got into if statement";
 				$loginUnsuccessful = false;
 				session_start();
 
 				$_SESSION["name"] = $rows['name']; //store their name
 				$_SESSION["username"] = $rows['username']; //store their username
-				
+
 				echo $_SESSION["name"];
 
 				if( $rows['user'] === "guest" ){ //guest logs in
@@ -43,10 +44,11 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 				echo "name:" . $_SESSION["name"];
 				//header('Location: /index.php');
 			}
-			else{
+			else {
 				$loginUnsuccessful = true;
 			}
 		}
+
 		if ( $loginUnsuccessful ){
 			echo "<p> Login Unsuccessful. <a href='javascript:history.back()'>Try again</a> or go back to <a href='/'>Homepage</a>.</p>";
 		}
