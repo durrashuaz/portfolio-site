@@ -27,10 +27,10 @@ $uri_segments = explode( '/', $uri_path );
 $url_segment_1 = $uri_segments[1];
 $url_segment_2 = $uri_segments[2];
 
-if($url_segment_1){
+if(isset($url_segment_1)){
     echo $url_segment_1;
 }
-if($url_segment_2){
+if(isset($url_segment_1)){
     echo $url_segment_2;
 }
 
