@@ -1,4 +1,9 @@
-<?php require 'components/_head-header.php' ?>
+<?php 
+	require 'components/_head-header.php';
+	if( isset($_SESSION['status']) &&  $_SESSION['status'] !== "admin") {
+		echo "Non-admins do not have posting priveledges.";
+	}
+?>
 
 <div class="section">
     <div class="container">

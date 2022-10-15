@@ -8,7 +8,7 @@
     </div>
 </div>
 
-<?php require "components/_footer.php" ?>
+<?php  "components/_footer.php" ?>
 
 </body>
 </html>
