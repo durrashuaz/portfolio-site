@@ -1,12 +1,4 @@
-<?php
-    if(!isset($_SESSION)) {
-        session_start();
-    }
-?>
-<!DOCTYPE html>
-<html>
-<?php
-require "components/_head-header.php";
+<?php require "components/_head-header.php";
 
 $uriSegments = explode( "/", parse_url( $_SERVER["REQUEST_URI"], PHP_URL_PATH ) );
 $lastUriSegment = array_pop( $uriSegments );

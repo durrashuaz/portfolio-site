@@ -1,11 +1,3 @@
-<?php
-    if(!isset($_SESSION)) {
-        session_start();
-    }
-
-?>
-<!DOCTYPE html>
-<html>
 <?php require 'components/_head-header.php' ?>
 
 <div class="section">
