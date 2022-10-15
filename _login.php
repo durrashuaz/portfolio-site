@@ -13,7 +13,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 	$sql = mysqli_query( $conn, "SELECT * FROM userlog" )
 		or die( "Query unsuccessful " . mysql_error() );
 
-	$loginUnsuccessful = false;
+	$loginUnsuccessful = true;
 
 	//query successful
 	if( $sql-> num_rows > 0 ){
