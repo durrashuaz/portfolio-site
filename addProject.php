@@ -1,5 +1,5 @@
 <?php require 'components/_head-header.php'; ?>
-<div class="section">
+<div class="section section--fh">
 	<div class="container">
 		<?php 
 		if( !( isset($_SESSION['status']) &&  $_SESSION['status'] === "admin") ) {

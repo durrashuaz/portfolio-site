@@ -9,4 +9,7 @@
             height: initial;
         }
     }
+    &--fh {
+        height: calc( 100vh - 136px );
+    }
 }

@@ -14,14 +14,12 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 		or die( "Query unsuccessful " . mysql_error() );
 
 	$loginUnsuccessful = false;
-	echo $email; echo' space '; echo $password;
 
 	//query successful
 	if( $sql-> num_rows > 0 ){
 
 		while( $rows = mysqli_fetch_assoc( $sql ) ){
-			if( $email === $rows['email'] && $password === $rows['password']){ //login matches data
-
+			if( $email === $rows['email'] && $password === $rows['password'] && $loginUnsuccessful===false ){ //login matches data
 				$loginUnsuccessful = false;
 
 				$_SESSION["name"] = $rows['name']; //store their name
@@ -33,13 +31,11 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 				else if( $rows['user'] === "admin" ){
 					$_SESSION['status'] = "admin";
 				}
-				echo "status: ". $_SESSION['status'];
 			}
 			else {
 				$loginUnsuccessful = true;
 			}
 		}
-
 		if ( $loginUnsuccessful ){
 			echo "<p> Login Unsuccessful. <a href='javascript:history.back()'>Try again</a> or go back to <a href='/'>Homepage</a>.</p>";
 		}

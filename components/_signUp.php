@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 					$_SESSION["name"] = $name; //store their name
 					$_SESSION["username"] = $username; //store their username
 					$_SESSION['status'] = $userStatus; //status of user indicated
-					
+
 					$loginUnsuccessful = false;
 					//user signed up and logged in
 					header('Location: /');
