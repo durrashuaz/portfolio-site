@@ -19,7 +19,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 	if( $sql-> num_rows > 0 ){
 
 		while( $rows = mysqli_fetch_assoc( $sql ) ){
-			if( $email === $rows['email'] && $password === $rows['password'] && $loginUnsuccessful===false ){ //login matches data
+			if( $email === $rows['email'] && $password === $rows['password'] && $loginUnsuccessful ){ //login matches data
 				$loginUnsuccessful = false;
 
 				$_SESSION["name"] = $rows['name']; //store their name
