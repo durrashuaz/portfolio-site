@@ -5,9 +5,7 @@
 ?>
 <!DOCTYPE html>
 <html>
-<?php
-require "_head-header.php";
-?>
+<?php require 'components/_head-header.php' ?>
 
 <div class='bg bg--light bg--lines1'>
     <div class='section'>
