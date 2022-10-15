@@ -45,7 +45,7 @@ if( $first_url_segment === "index.php" || $first_url_segment === "" ) {
                         }
                         //
                         echo "status: ". $_SESSION['status'];
-                        echo "new";
+                        echo "";
                         echo " name:" . $_SESSION["name"];
                         //
                         if(isset($_SESSION['status'])){ ?>
@@ -92,3 +92,7 @@ if( $first_url_segment === "index.php" || $first_url_segment === "" ) {
     include '_login.html';
     include '_signUp.html';
 ?>
+
+<script type="text/javascript">
+    window.alert('Website under maintenance. October 15.');
+</script>
