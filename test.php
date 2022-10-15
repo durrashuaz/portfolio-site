@@ -2,6 +2,7 @@
 <html>
 <?php require 'components/_head-header.php' ?>
 
+What thE FUCK
 
 <?php
  if(!isset($_SESSION)) {
@@ -9,6 +10,7 @@
 }
  echo "status: ". $_SESSION['status'];
 ?>
+
 <?php require 'components/_footer.php' ?>
 </body>
 </html>

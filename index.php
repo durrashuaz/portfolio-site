@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <?php require 'components/_head-header.php' ?>
+
 <div class="bg bg--featured bg--lines1">
     <div class="section section--about">
         <div class="container">

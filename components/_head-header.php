@@ -85,7 +85,7 @@ if( $first_url_segment === "index.php" || $first_url_segment === "" ) {
             </div>
         </div>
     </header>
-</div>
+
 
 <?php
     include '../_login.html';
