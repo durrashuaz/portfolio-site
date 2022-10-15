@@ -30,7 +30,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 
 	if( $sql -> num_rows > 0 ){
 		$lastrow = mysqli_query( $conn,"SELECT * FROM projects ORDER BY id DESC LIMIT 1" )
-		or die( "Query unsuccessful " . mysqli_error( $conn ) );
+			or die( "Query unsuccessful " . mysqli_error( $conn ) );
 		while( $row = mysqli_fetch_assoc( $lastrow ) ){
 			$id =  $row['id'] + 1;  //last postID is incremented by 1
 		}
@@ -46,17 +46,17 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 	//Add images for post
 	$target_dir = "../images/project-images/";
 	$target_file = $target_dir . basename( $_FILES["fileToUpload"]["name"] );
-	echo $target_file;
+	//echo $target_file;
 	$uploadOk = 1;
 	$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
 	// Check if image file is a actual image or fake image
 	$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
 	if( $check !== false ) {
-		echo "File is an image - " . $check["mime"] . ".";
+		//echo "File is an image - " . $check["mime"] . ".";
 		$uploadOk = 1;
 	} else {
-		echo "File is not an image.";
+		//echo "File is not an image.";
 		$uploadOk = 0;
 	}
 
