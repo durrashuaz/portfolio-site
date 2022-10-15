@@ -29,14 +29,10 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 		or die( "Query unsuccessful " . mysqli_error( $conn ) );
 
 	if( $sql -> num_rows > 0 ){
-		echo "<p>more than 0 rows</p>";
 		$lastrow = mysqli_query( $conn,"SELECT * FROM projects ORDER BY id DESC LIMIT 1" )
 		or die( "Query unsuccessful " . mysqli_error( $conn ) );
-
 		while( $row = mysqli_fetch_assoc( $lastrow ) ){
-			echo "the id is " . $row["id"] . "| ";
 			$id =  $row['id'] + 1;  //last postID is incremented by 1
-			echo "the id + 1 is" . $id . "fuck";
 		}
 	} else {
 		$id = 0;
@@ -79,24 +75,24 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 	// Allow certain file formats
 	if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
 		&& $imageFileType != "gif" ) {
-		echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+		//echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
 		$uploadOk = 0;
 	}
 
 	// Check if $uploadOk is set to 0 by an error
 	if ($uploadOk == 0) {
-		echo "Sorry, your file was not uploaded.";
+		//echo "Sorry, your file was not uploaded.";
 		// if everything is ok, try to upload file
 	} else {
 		if ( move_uploaded_file( $_FILES["fileToUpload"]["tmp_name"], $target_file ) ) {
-			echo "uploading";
-			echo $target_file . $id;
+			//echo "uploading";
+			//echo $target_file . $id;
 			$sql = mysqli_query( $conn, "INSERT INTO images ( img_dir, projectId ) VALUES ( '$target_file', '$id' )" )
 			or die("Query unsuccessful " . mysqli_error($conn));
 
-			echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+			//echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
 	} else {
-		echo "Sorry, there was an error uploading your file.";
+		//echo "Sorry, there was an error uploading your file.";
 	}
 
 	//end add images
@@ -117,17 +113,9 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 			or die("Query unsuccessful " . mysqli_error($conn));
 	}
 }
-echo "<p>out of branches</p>"; //test
 
-//query successful
 header('Location: /add-project/_add-entry-file.php');
-// change above
-$conn->close();
 
-		//}//
-	//}//
-	//else{//
-		//header('Location: /webroot/finalWebMini/redirect.php');//
-	//}//
+$conn->close();
 
 ?>
