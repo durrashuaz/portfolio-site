@@ -1,10 +1,9 @@
-<?php 
-	require 'components/_head-header.php';
-	if( !( isset($_SESSION['status']) &&  $_SESSION['status'] === "admin") ) { ?>
-		<div class="section">
-			<div class="container"> <?php
-				echo "Non-admins do not have posting priveledges.";
-	}
+<?php require 'components/_head-header.php'; ?>
+	<div class="section">
+		<div class="container"> 
+		<?php if( !( isset($_SESSION['status']) &&  $_SESSION['status'] === "admin") ) { ?>
+			Non-admins do not have posting priveledges.";
+		<?php}
 	else { ?>
 		<h1 class="h1 h1--mb">Add Project Entry</h1>
 		<form class="project-form" id="addPostForm" method="POST" enctype="multipart/form-data" action="add-project/_processProjectEntry.php">
