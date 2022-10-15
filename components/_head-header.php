@@ -44,6 +44,7 @@ if( $first_url_segment === "index.php" || $first_url_segment === "" ) {
                             session_start();
                         }
                         echo "status: ". $_SESSION['status'];
+                        echo "new";
                         if(isset($_SESSION['status'])){ ?>
                             <div class="flex flex--column">
                             <?php
