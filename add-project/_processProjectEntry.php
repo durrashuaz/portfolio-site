@@ -17,6 +17,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 	$title = $_POST["link"];
 	$subtitle = $_POST["subtitle"];
 	$organisation = $_POST["organisation"];
+	$organisation = $_POST["link"];
 	$content = $_POST["projectText"];
 
 	//set current time in appropriate format
