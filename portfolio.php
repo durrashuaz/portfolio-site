@@ -45,7 +45,7 @@ or die( "Query unsuccessful" . mysqli_error( $conn ) );
     </div>
 </div>
 
-<?php require "components/_footer.html" ?>
+<?php require "components/_footer.php" ?>
 
 </body>
 </html>

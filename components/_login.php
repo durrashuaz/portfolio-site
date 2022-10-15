@@ -19,7 +19,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 
 		while( $rows = mysqli_fetch_assoc( $sql ) ){
 			if( $email === $rows['email'] && $password === $rows['password'] && $loginUnsuccessful == false; ){ //login matches data
-				
+
 				$loginUnsuccessful = false;
 				session_start();
 
@@ -36,7 +36,6 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 				}
 				echo "status: ". $_SESSION['status'];
 				echo " sad:" . $_SESSION["name"];
-				//header('Location: /index.php');
 			}
 			else {
 				$loginUnsuccessful = true;

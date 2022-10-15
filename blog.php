@@ -12,7 +12,7 @@ require "components/_head-header.php";
     </div>
 </div>
 
-<?php require "components/_footer.html" ?>
+<?php require "components/_footer.php" ?>
 
 </body>
 </html>

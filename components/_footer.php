@@ -22,3 +22,4 @@
     </div>
 </footer>
 <script src="../main.js"></script>
+<?php $conn->close(); ?>
