@@ -7,7 +7,7 @@ $email = $_POST["email"];
 $password = $_POST["password"];
 
 if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
-	
+
 	session_start();
 
 	$sql = mysqli_query( $conn, "SELECT * FROM userlog" )
@@ -29,14 +29,12 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 
 				if( $rows['user'] === "guest" ){ //guest logs in
 					$_SESSION['status'] = "guest"; //status of user indicated
-					// header('Location: /webroot/finalWebMini/redirect.php');
 				}
 				else if( $rows['user'] === "admin" ){
 					$_SESSION['status'] = "admin";
-					// header('Location: /webroot/finalWebMini/addPost.html');
 				}
+
 				echo "status: ". $_SESSION['status'];
-				echo " sad:" . $_SESSION["name"];
 			}
 			else {
 				$loginUnsuccessful = true;
