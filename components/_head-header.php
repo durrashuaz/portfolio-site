@@ -88,6 +88,6 @@ if( $first_url_segment === "index.php" || $first_url_segment === "" ) {
 
 
 <?php
-    include '../_login.html';
+    include '_login.html';
     include '_signUp.html';
 ?>
