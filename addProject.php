@@ -2,10 +2,11 @@
     if(!isset($_SESSION)) {
         session_start();
     }
+
 ?>
 <!DOCTYPE html>
 <html>
-<?php require 'head-header-2.php' ?>
+<?php require '_head-header.php' ?>
 
 <div class="section">
     <div class="container">
