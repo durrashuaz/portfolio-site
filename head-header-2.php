@@ -30,7 +30,7 @@ $url_segment_2 = $uri_segments[2];
 echo $url_segment_1;
 echo $url_segment_2;
 
-if( $first_url_segment === "index.php" || $first_url_segment === "" ){
+if( $url_segment_1 === "index.php" || $url_segment_1 === "" ){
     echo "<div class='bg bg--featured bg--lines1'>";
 } else {
     echo "<div class='bg bg--light bg--lines1'>";
