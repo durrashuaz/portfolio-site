@@ -46,3 +46,7 @@
 <?php require 'components/_footer.php' ?>
 </body>
 </html>
+
+<script type="text/javascript">
+    alert('Website under maintenance. October 15.');
+</script>

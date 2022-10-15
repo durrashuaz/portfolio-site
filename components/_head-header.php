@@ -92,7 +92,3 @@ if( $first_url_segment === "index.php" || $first_url_segment === "" ) {
     include '_login.html';
     include '_signUp.html';
 ?>
-
-<script type="text/javascript">
-    alert('Website under maintenance. October 15.');
-</script>
