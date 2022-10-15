@@ -18,6 +18,6 @@ if( $posts -> num_rows > 0 ){
     }
 }
 
-header('Location: /"$project_title" . ".php"');
+header( 'Location: /portfolio.php' );
 
 ?>
