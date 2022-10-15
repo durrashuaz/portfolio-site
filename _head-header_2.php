@@ -1,3 +1,9 @@
+<?php
+if(!isset($_SESSION)) {
+    session_start();
+}
+?>
+
 <head lang="en">
    <meta charset="utf-8">
    <title>Durra Shuazlan</title>
