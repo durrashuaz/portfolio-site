@@ -5,12 +5,7 @@
 ?>
 <!DOCTYPE html>
 <html>
-<?php require 'components/_head-header.php'
-
-$posts = mysqli_query( $conn, "SELECT * FROM projects" )
-or die( "Query unsuccessful" . mysqli_error( $conn ) );
-
-?>
+<?php require 'components/_head-header.php'?>
 
 <div class='bg bg--light bg--lines1'>
     <div class='section'>
@@ -18,7 +13,11 @@ or die( "Query unsuccessful" . mysqli_error( $conn ) );
             <h1 class="h1 mb-40">Projects</h1>
             <div class="listing">
             <?php
+                $posts = mysqli_query( $conn, "SELECT * FROM projects" )
+                or die( "Query unsuccessful" . mysqli_error( $conn ) );
+
                 $width="a4-12 d3-6";
+
                 if( $posts -> num_rows > 0 ){ ?>
                     <table class="x8-12 a12-12">
                         <tr>
