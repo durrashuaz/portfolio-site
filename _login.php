@@ -29,14 +29,14 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 
 
 				if( $rows['user'] === "guest" ){ //guest logs in
-					$_SESSION["status"] = "guest"; //status of user indicated
+					$_SESSION['status'] = "guest"; //status of user indicated
 					// header('Location: /webroot/finalWebMini/redirect.php');
 				}
 				else if( $rows['user'] === "admin" ){
-					$_SESSION["status"] = "admin";
+					$_SESSION['status'] = "admin";
 					// header('Location: /webroot/finalWebMini/addPost.html');
 				}
-				echo "status: ". $_SESSION["status"];
+				echo "status: ". $_SESSION['status'];
 				echo " name:" . $_SESSION["name"];
 				//header('Location: /index.php');
 			}
