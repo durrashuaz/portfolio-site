@@ -19,11 +19,16 @@ if(!isset($_SESSION)) {
     session_start();
 }
 
+
 include 'includes/connect.php'; //if file in no specific folder
 
 $uri_path = parse_url( $_SERVER['REQUEST_URI'], PHP_URL_PATH );
 $uri_segments = explode( '/', $uri_path );
-$first_url_segment = $uri_segments[1];
+$url_segment_1 = $uri_segments[1];
+$url_segment_2 = $uri_segments[2];
+
+echo $url_segment_1;
+echo $url_segment_2;
 
 if( $first_url_segment === "index.php" || $first_url_segment === "" ){
     echo "<div class='bg bg--featured bg--lines1'>";
