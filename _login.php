@@ -36,7 +36,9 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 				$loginUnsuccessful = true;
 			}
 		}
-		if ( $loginUnsuccessful ){
+		
+		//outcome of login
+		if ( !( isset($_SESSION['status'])) ){
 			echo "<p> Login Unsuccessful. <a href='javascript:history.back()'>Try again</a> or go back to <a href='/'>Homepage</a>.</p>";
 		}
 		else {
