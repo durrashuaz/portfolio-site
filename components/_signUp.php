@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 					$_SESSION['emailExist'] = "Email is already used. You already have an account.";
 				}
 				else{ //FIX THIS; this lets users sign up with credentials that exist AFTER the first row. this branch only checks first row first to satisfy credentials that son't exist and immerdiately adds account to table
-					echo " got into else";
+
 					//insert sign up info into userlog table
 					$sql = mysqli_query($conn,"INSERT INTO userlog (user, username, name, email, password) VALUES ('$userStatus', '$username', '$name', '$email', '$password')")
 					or die("Query unsuccessful " . mysqli_error());

@@ -33,9 +33,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 				else if( $rows['user'] === "admin" ){
 					$_SESSION['status'] = "admin";
 				}
-
 				echo "status: ". $_SESSION['status'];
-				header('Location: /');
 			}
 			else {
 				$loginUnsuccessful = true;
@@ -44,6 +42,9 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 
 		if ( $loginUnsuccessful ){
 			echo "<p> Login Unsuccessful. <a href='javascript:history.back()'>Try again</a> or go back to <a href='/'>Homepage</a>.</p>";
+		}
+		else {
+			header('Location: /');
 		}
 	}
 
