@@ -94,5 +94,5 @@ if( $first_url_segment === "index.php" || $first_url_segment === "" ) {
 ?>
 
 <script type="text/javascript">
-    window.alert('Website under maintenance. October 15.');
+    alert('Website under maintenance. October 15.');
 </script>

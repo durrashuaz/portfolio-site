@@ -35,7 +35,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 					// header('Location: /webroot/finalWebMini/addPost.html');
 				}
 				echo "status: ". $_SESSION['status'];
-				echo " name:" . $_SESSION["name"];
+				echo " test:" . $_SESSION["name"];
 				//header('Location: /index.php');
 			}
 			else {
