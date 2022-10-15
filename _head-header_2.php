@@ -42,6 +42,9 @@ if( $first_url_segment === "index.php" || $first_url_segment === "" ){
             <div class="nav__login-burger a6-12">
                 <div class="nav__login grid">
                     <?php
+                        if(!isset($_SESSION)) {
+                            session_start();
+                        }
                         //
                         echo "status: ". $_SESSION['status'];
                         echo "";
