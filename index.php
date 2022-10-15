@@ -2,7 +2,6 @@
     if(!isset($_SESSION)) {
         session_start();
     }
-    session.auto_start = 1;
 ?>
 <!DOCTYPE html>
 <html>

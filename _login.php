@@ -1,7 +1,6 @@
 <?php
 
 include 'includes/connect.php';
-session.auto_start
 
 //get user info from form
 $email = $_POST["email"];
