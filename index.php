@@ -45,6 +45,8 @@
     </div>
 </div>
 
-<?php require 'components/_footer.php' ?>
+<?php require 'components/_footer.php' 
+    phpinfo();
+?>
 </body>
 </html>

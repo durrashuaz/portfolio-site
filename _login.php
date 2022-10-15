@@ -7,6 +7,8 @@ $email = $_POST["email"];
 $password = $_POST["password"];
 
 if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
+	
+	session_start();
 
 	$sql = mysqli_query( $conn, "SELECT * FROM userlog" )
 		or die( "Query unsuccessful " . mysql_error() );
@@ -21,7 +23,6 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 			if( $email === $rows['email'] && $password === $rows['password']){ //login matches data
 
 				$loginUnsuccessful = false;
-				session_start();
 
 				$_SESSION["name"] = $rows['name']; //store their name
 				$_SESSION["username"] = $rows['username']; //store their username
