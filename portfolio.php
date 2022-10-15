@@ -28,10 +28,10 @@
                                     <td>$rows['organisation']</td>
                                     <td>$rows['dateTime']</td>
                                 </tr>";
-                            <?php
+                        
                             }
                         }
-                        ?>
+                        ?> 
                     </table>
                     <?php
                 }
