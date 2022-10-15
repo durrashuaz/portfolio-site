@@ -5,8 +5,7 @@
 ?>
 <!DOCTYPE html>
 <html>
-<?php
-<?php require 'components/_head-header.php' ?>
+<?php require 'components/_head-header.php'
 
 $posts = mysqli_query( $conn, "SELECT * FROM projects" )
 or die( "Query unsuccessful" . mysqli_error( $conn ) );
