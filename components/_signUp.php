@@ -14,17 +14,14 @@ $userStatus = "guest"; //indicates new account is a guest
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 	//query: get existing user info in database
-$sql = mysqli_query($conn,'SELECT * FROM userlog')
-	or die("Query unsuccessful " . mysqli_error($conn));
-
-	//query successful
-	//check if credientials don't already exist, error message if it does
-		//$row = mysqli_fetch_array($sql);
-
-	$credentialsExist = false;
-	if($sql -> num_rows > 0){  //if table has row(s)
-		while($rows = mysqli_fetch_assoc($sql)){
-			if($credentialsExist == false){
+	$sql = mysqli_query($conn,'SELECT * FROM userlog')
+		or die("Query unsuccessful " . mysqli_error($conn));
+	
+		$credentialsExist = false;
+	
+		if( $sql -> num_rows > 0 ){  //if table has row(s)
+		while( $rows = mysqli_fetch_assoc( $sql ) ){
+			if( $credentialsExist == false ){
 
 				if($username === $rows['username']){ //username already exists in database
 					//if($username === $rows['username']){
