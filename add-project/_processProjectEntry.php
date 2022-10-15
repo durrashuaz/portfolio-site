@@ -94,6 +94,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 	} else {
 		//echo "Sorry, there was an error uploading your file.";
 	}
+	header('Location: /add-project/_add-entry-file.php');
 
 	//end add images
 }
@@ -113,8 +114,6 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 			or die("Query unsuccessful " . mysqli_error($conn));
 	}
 }
-
-header('Location: /add-project/_add-entry-file.php');
 
 $conn->close();
 
