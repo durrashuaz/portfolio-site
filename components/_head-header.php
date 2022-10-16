@@ -29,7 +29,7 @@ $uri_segments = explode( '/', $uri_path );
 $first_url_segment = $uri_segments[1];
 
 if( $first_url_segment === "index.php" || $first_url_segment === "" ) {
-    echo "<div class='bg bg--featured'>";
+    echo "<div class='bg bg--white'>";
 } else {
     echo "<div class='bg bg--light'>";
 }
