@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 		$sql = mysqli_query( $conn, "DELETE FROM comments WHERE id = '$commentID'" )
 			or die( "Query unsuccessful " . mysqli_error( $conn ) );
 		$previous_url = $_SERVER[HTTP_REFERER];
-		echo $previous_url;
+		// echo $previous_url;
 		header('Location: ' . $previous_url .  '"' . );
 	}
 

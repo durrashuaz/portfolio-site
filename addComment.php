@@ -32,9 +32,9 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 		or die("Query unsuccessful " . mysqli_error($conn));
 
 	//query successful
-		// header('Location: /webroot/finalWebMini/viewBlog.php');
-		//change above
-//}
+	$previous_url = $_SERVER[HTTP_REFERER];
+	header('Location: ' . $previous_url .  '"' . );
+
 }
 
 
