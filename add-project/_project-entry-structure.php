@@ -45,11 +45,7 @@ if( $posts -> num_rows > 0 ){
                                 <a href="#comment-section">
                                     <figure class="chat-symbol__figure x5-12 a10-12 b12-12">
                                         <img class="chat-symbol__img" src="images/chatShape.png" alt="chat" width="" height="">
-                                       <?php
-                                            $comment_count = mysqli_query( $conn, "SELECT COUNT(*) FROM comments" )
-                                            or die( "Query unsuccessful " . mysqli_error( $conn ) );
-                                       ?>
-                                        <p class="chat-symbol__count"><?php echo $comment_count; ?></p>
+                                        <p class="chat-symbol__count"><?php echo ( $comments -> num_rows ) ?></p>
                                     </figure>
                                 </a>
                             </button>
