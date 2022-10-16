@@ -1184,7 +1184,6 @@ body {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 18.5%;
   right: 0;
 }
 @media (min-width: 1751px) {
