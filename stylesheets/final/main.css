@@ -1445,16 +1445,12 @@ a:visited {
   color: initial;
 }
 
-.post div,
-.post p,
 .content-text {
   font-size: 22px;
   max-width: 60rem;
 }
 @media (max-width: 1313px) {
-  .post div,
-.post p,
-.content-text {
+  .content-text {
     font-size: 18px;
     line-height: 1.6rem;
   }
@@ -1476,7 +1472,15 @@ a:visited {
 }
 .post div,
 .post p {
+  font-size: 18px;
+  line-height: 29px;
   margin-bottom: 1rem;
+}
+@media (max-width: 449px) {
+  .post div,
+.post p {
+    font-size: 16px;
+  }
 }
 
 .project-form legend {
