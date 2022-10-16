@@ -39,7 +39,7 @@ if( $posts -> num_rows > 0 ){
                                     ?>
                                 </div>
                                 <h2 class=""><?php echo $subtitle; ?></h2>
-                                <div class="a8-12 c5-6 d12-12 e10-12 h6-6"><?php echo $content; ?></div>
+                                <div class="a9-12 c5-6 d12-12 e10-12 h6-6"><?php echo $content; ?></div>
                             </div>
                             <button class="chat-symbol__section a4-12 e5-12 g3-6 h5-6">
                                 <a href="#comment-section">
