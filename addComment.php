@@ -31,8 +31,14 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 	$sql = mysqli_query($conn,"INSERT INTO comments ( postId, username,  dateTime, comment ) VALUES ( '$postID', '$username' ,'$dateTime', '$commentText')")
 		or die("Query unsuccessful " . mysqli_error($conn));
 
-	$commentID = mysqli_query( $conn, "SELECT id FROM comments ORDER BY ID DESC LIMIT 1" )
+	$lastComment = mysqli_query( $conn, "SELECT * FROM comments ORDER BY ID DESC LIMIT 1" )
 	or die( "Query unsuccessful sdfsdf" . mysqli_error( $conn ) );
+
+	if( $sql -> num_rows > $lastComment ){
+		while( $row = mysqli_fetch_assoc( $sql) ){
+			echo $row['id']; 
+		}
+	}
 
 	var_dump($commentID);
 
