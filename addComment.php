@@ -36,8 +36,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 
 	if( $lastComment -> num_rows > 0 ){
 		while( $row = mysqli_fetch_assoc( $lastComment) ){
-			echo $row['postId']; 
-			$commentID = $row['postId']; 
+			$commentID = $row['postId'];
 		}
 	}
 
@@ -49,20 +48,19 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 
 	if( $projectWithCommentID -> num_rows > 0 ){
 		while( $row = mysqli_fetch_assoc( $projectWithCommentID ) ){
-			echo "title is: " . $row['title'];
 			$project_title = $row['title'];
 		}
 	}
-
-	echo $project_title;
 
 	//convert title to file path
 	$project_title = str_replace( " ", "-", $project_title );
 	$project_title = strtolower( $project_title );
 	$project_url= $project_title . '.php';
 
+	echo $project_url;
+
 	//query successful
-	// header('Location: ' . $project_url );
+	header('Location: ' . $project_url );
 
 }
 
