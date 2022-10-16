@@ -31,11 +31,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 		//delete comment using comment's ID
 		$sql = mysqli_query( $conn, "DELETE FROM comments WHERE id = '$commentID'" )
 			or die( "Query unsuccessful " . mysqli_error( $conn ) );
+		$previous_url = $_SERVER[HTTP_REFERER];
+		header('Location: ' . $previous_url .  '"' . );
 	}
 
-	//query successful
-		// header('Location: /webroot/finalWebMini/viewBlog.php');
-		//change above
 }
 
 ?>
