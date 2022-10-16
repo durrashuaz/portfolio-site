@@ -37,16 +37,23 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 	if( $lastComment -> num_rows > 0 ){
 		while( $row = mysqli_fetch_assoc( $lastComment) ){
 			echo $row['id']; 
+			$commentID = $row['id']; 
 		}
 	}
 
 	// var_dump($commentID);
 
 	//find post associated with comment
-	$result = mysqli_query($conn, "SELECT title FROM projects WHERE $postID = $commentID")
+	$projectWithCommentID = mysqli_query($conn, "SELECT * FROM projects WHERE $postID = $commentID")
 		or die("Query unsuccessful " . mysqli_error($conn));
+	if( $projectWithCommentID -> num_rows > 0 ){
+		while( $row = mysqli_fetch_assoc( $projectWithCommentID ) ){
+			echo $row['title']; 
+			$project_title= $row['title']; 
+		}
+	}
 
-	var_dump($result);
+	echo $project_title;
 
 	//convert title to file path
 	$project_title = str_replace( " ", "-", $project_title );
