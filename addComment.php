@@ -34,13 +34,13 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 	$lastComment = mysqli_query( $conn, "SELECT * FROM comments ORDER BY ID DESC LIMIT 1" )
 	or die( "Query unsuccessful sdfsdf" . mysqli_error( $conn ) );
 
-	if( $sql -> num_rows > $lastComment ){
-		while( $row = mysqli_fetch_assoc( $sql) ){
+	if( $lastComment -> num_rows > 0 ){
+		while( $row = mysqli_fetch_assoc( $lastComment) ){
 			echo $row['id']; 
 		}
 	}
 
-	var_dump($commentID);
+	// var_dump($commentID);
 
 	//find post associated with comment
 	$result = mysqli_query($conn, "SELECT title FROM projects WHERE $postID = $commentID")
