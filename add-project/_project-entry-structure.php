@@ -121,6 +121,7 @@ if( $posts -> num_rows > 0 ){
         } }
     }
 } ?>
+</div>
 <?php require "components/_footer.php" ?>
 
 </body>
