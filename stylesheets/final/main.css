@@ -613,7 +613,7 @@ body {
   background-color: #CFC9C9;
 }
 .bg--comments {
-  background-color: #fbf5e8;
+  background-color: #D9D9D9;
 }
 .bg--lines1 {
   background-image: url("../../images/lines1.png ");
@@ -1560,7 +1560,7 @@ a:visited {
   border: 1px black solid;
   border-radius: 0.5rem;
   padding: 1rem;
-  background-color: #fbf5e8;
+  background-color: #D9D9D9;
 }
 
 .commentTextArea {
