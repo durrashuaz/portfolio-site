@@ -22,7 +22,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 
 	//set current time in appropriate format
 	date_default_timezone_set('GMT');
-	$dateTime = date("Y-m-d");
+	$date = date("Y-m-d");
 
 	//generate a postID
 	$sql = mysqli_query( $conn, "SELECT  * FROM projects" )
@@ -40,7 +40,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 	//echo $id . "title and shit is:" . $title . "subtitle:". $subtitle . "content" . $content;
 	//insert all post information into database
 
-	$sql = mysqli_query( $conn, "INSERT INTO projects ( id, dateTime, title, link, subtitle, organisation, content ) VALUES ( '$id', '$dateTime',  '$title',  '$link', '$subtitle', '$organisation', '$content' )" )
+	$sql = mysqli_query( $conn, "INSERT INTO projects ( id, date, title, link, subtitle, organisation, content ) VALUES ( '$id', '$date',  '$title',  '$link', '$subtitle', '$organisation', '$content' )" )
 		or die( "Query unsuccessful " . mysqli_error( $conn ) );
 
 	//Add images for post
