@@ -27,7 +27,7 @@
                                 "<tr>
                                     <td><a href=" . $title_path . ">" . $rows['title'] . "</a></td>
                                     <td>" . $rows['organisation'] . "</td>
-                                    <td>" . $rows['dateTime'] . "</td>
+                                    <td>" . $rows['date'] . "</td>
                                 </tr>";
                             }
                         }
