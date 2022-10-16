@@ -102,17 +102,17 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 
 } else { //upload is from preview upload REMEMBER TO UPDATE THE VAR NAMES TO SUIT PROJECT INSTEAD OF BLOG!!
 
-	session_start();
+	// session_start();
 
-	if(isset($_SESSION['previewTitle']) && isset($_SESSION['previewBlog']) && isset($_SESSION['time'])) {
-		$dateTime = $_SESSION['time'];  //depends if they want the time from the original, or when it is posted, makes sense if it is posted
-		$title = $_SESSION['previewTitle'];
-		$blog = $_SESSION['previewBlog'];
+	// if(isset($_SESSION['previewTitle']) && isset($_SESSION['previewBlog']) && isset($_SESSION['time'])) {
+	// 	$dateTime = $_SESSION['time'];  //depends if they want the time from the original, or when it is posted, makes sense if it is posted
+	// 	$title = $_SESSION['previewTitle'];
+	// 	$blog = $_SESSION['previewBlog'];
 
-		//insert all post information into database
-		$sql = mysqli_query($conn,"INSERT INTO POSTS (postID, dateTime, title, content) VALUES ('$postID', '$dateTime', '$title', '$blog')")
-			or die("Query unsuccessful " . mysqli_error($conn));
-	}
+	// 	//insert all post information into database
+	// 	$sql = mysqli_query($conn,"INSERT INTO POSTS (postID, dateTime, title, content) VALUES ('$postID', '$dateTime', '$title', '$blog')")
+	// 		or die("Query unsuccessful " . mysqli_error($conn));
+	// }
 }
 
 $conn->close();

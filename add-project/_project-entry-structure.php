@@ -22,7 +22,7 @@ if( $posts -> num_rows > 0 ){
             $link = $rows["link"];
             $subtitle = $rows["subtitle"];
             $content = $rows["content"];
-            $date = $rows["dateTime"];
+            $date = $rows["date"];
             ?>
             <div class="bg bg--light bg--lines1">
                 <div class="section">
