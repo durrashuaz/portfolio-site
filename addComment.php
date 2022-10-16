@@ -31,9 +31,24 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 	$sql = mysqli_query($conn,"INSERT INTO comments ( postId, username,  dateTime, comment ) VALUES ( '$postID', '$username' ,'$dateTime', '$commentText')")
 		or die("Query unsuccessful " . mysqli_error($conn));
 
+	$commentID = mysqli_query( $conn, "SELECT id FROM comments ORDER BY ID DESC LIMIT 1" )
+	or die( "Query unsuccessful sdfsdf" . mysqli_error( $conn ) );
+
+	echo $commentID;
+
+	//find post associated with comment
+	$result = mysqli_query($conn, "SELECT title FROM projects WHERE $postID = $commentID")
+		or die("Query unsuccessful " . mysqli_error($conn));
+
+	echo $result;
+
+	//convert title to file path
+	$project_title = str_replace( " ", "-", $project_title );
+	$project_title = strtolower( $project_title );
+	$project_url= $project_title . '.php';
+
 	//query successful
-	$previous_url = $_SERVER[HTTP_REFERER];
-	header('Location: ' . $previous_url );
+	// header('Location: ' . $project_url );
 
 }
 
