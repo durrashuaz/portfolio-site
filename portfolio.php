@@ -11,14 +11,14 @@
 
                 $width="a4-12 d3-6";
 
-                if( $posts -> num_rows > 0 ){ ?>
-                    <table class="x8-12 a12-12">
+                if( $posts -> num_rows > 0 ){
+                    echo "<table class='x8-12 a12-12'>
                         <tr>
-                            <th class="<?php echo $width; ?>">Project</th>
-                            <th class="<?php echo $width; ?>">Organisation</th>
-                            <th class="<?php echo $width; ?>">Date</th>
-                        </tr>
-                        <?php
+                            <th class=" . $width . ">Project</th>
+                            <th class=" . $width . ">Organisation</th>
+                            <th class=" . $width . ">Date</th>
+                        </tr>";
+
                         while( $rows = mysqli_fetch_assoc( $posts ) ){
                             $title_path = str_replace( " ", "-", $rows["title"] );
                             $title_path = $title_path . ".php";
@@ -31,9 +31,7 @@
                                 </tr>";
                             }
                         }
-                        ?> 
-                    </table>
-                    <?php
+                    echo "</table>";
                 }
             ?>
             </div>
