@@ -40,10 +40,8 @@ a {
     &:visited {
         color: initial;
     }
-    .listing {
-        a {
-            text-decoration: underline;
-        }
+    .listing & {
+        text-decoration: underline;
     }
 }
 
