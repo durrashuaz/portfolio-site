@@ -34,13 +34,13 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 	$commentID = mysqli_query( $conn, "SELECT id FROM comments ORDER BY ID DESC LIMIT 1" )
 	or die( "Query unsuccessful sdfsdf" . mysqli_error( $conn ) );
 
-	echo $commentID;
+	var_dump($commentID);
 
 	//find post associated with comment
 	$result = mysqli_query($conn, "SELECT title FROM projects WHERE $postID = $commentID")
 		or die("Query unsuccessful " . mysqli_error($conn));
 
-	echo $result;
+	var_dump($result);
 
 	//convert title to file path
 	$project_title = str_replace( " ", "-", $project_title );
