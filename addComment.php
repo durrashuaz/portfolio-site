@@ -36,8 +36,8 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 
 	if( $lastComment -> num_rows > 0 ){
 		while( $row = mysqli_fetch_assoc( $lastComment) ){
-			echo $row['id']; 
-			$commentID = $row['id']; 
+			echo $row['postId']; 
+			$commentID = $row['postId']; 
 		}
 	}
 
@@ -49,7 +49,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 
 	if( $projectWithCommentID -> num_rows > 0 ){
 		while( $row = mysqli_fetch_assoc( $projectWithCommentID ) ){
-			echo $row['title'];
+			echo "title is: " . $row['title'];
 			$project_title = $row['title'];
 		}
 	}
