@@ -80,20 +80,20 @@ if( $posts -> num_rows > 0 ){
                                                 <?php
                                                 //Delete comment button (admin)
                                                 $commentID= $commentRows["id"];
-                                                if(!isset($_SESSION)) {
+                                                if(!isset($_SESSION)){
                                                     session_start();
                                                 }
                                                 if( isset( $_SESSION["status"] ) ){
-                                                    if( $_SESSION["status"] === "admin" ){
-                                                ?>
-                                                <form class="comments__item__delete-button" method="POST" action="delete.php" class="deleteCommentForm">
-                                                <input type="hidden" name="commentID" value="$commentID"/>
-                                                <input type="submit" class="deleteButton" value="Delete comment">
-                                                </form>
+                                                    if( $_SESSION["status"] === "admin" ){ ?>
+                                                        <form class="comments__item__delete-button" method="POST" action="delete.php" class="deleteCommentForm">
+                                                        <input type="hidden" name="commentID" value="$commentID"/>
+                                                        <input type="submit" class="deleteButton" value="Delete comment">
+                                                        </form>
+                                                        <?php
+                                                    }
+                                                } ?>
                                             </div>
-                                            <?php
-                                                }
-                                            }
+                                        <?php
                                         }
                                     }
                                 }
