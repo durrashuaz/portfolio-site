@@ -1163,6 +1163,8 @@ body {
 .about-home__image {
   display: flex;
   position: relative;
+  align-items: center;
+  justify-content: center;
   filter: grayscale(15%);
 }
 @media (max-width: 684px) {

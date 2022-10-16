@@ -90,6 +90,8 @@ display: flex;
 .about-home__image {
     display: flex;
     position: relative;
+    align-items: center;
+    justify-content: center;
     filter: grayscale( 15% );
     @media ( max-width: $f ) {
         margin-top: 4rem;
