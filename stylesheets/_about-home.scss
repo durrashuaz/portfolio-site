@@ -91,9 +91,6 @@ display: flex;
     display: flex;
     position: relative;
     filter: grayscale( 15% );
-    @media ( max-width: $f ) {
-        margin-top: 4rem;
-    }
     img {
         @media ( min-width: $x ) {
             width: 90%;

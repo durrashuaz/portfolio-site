@@ -1165,11 +1165,6 @@ body {
   position: relative;
   filter: grayscale(15%);
 }
-@media (max-width: 684px) {
-  .about-home__image {
-    margin-top: 4rem;
-  }
-}
 @media (min-width: 1751px) {
   .about-home__image img {
     width: 90%;
