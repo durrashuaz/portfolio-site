@@ -11,6 +11,12 @@
     }
 }
 
+.nav__message {
+    @media( max-width: $h ) {
+       font-size: 14px;
+    }
+}
+
 .nav__links {
     display: flex;
     flex-direction: column;

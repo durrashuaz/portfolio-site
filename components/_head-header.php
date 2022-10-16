@@ -55,7 +55,7 @@ if( $first_url_segment === "index.php" || $first_url_segment === "" ) {
                             session_start();
                         }
                         if(isset($_SESSION['status'])){ ?>
-                            <div class="flex flex--column">
+                            <div class="nav__message flex flex--column">
                             <?php
                                 echo "Welcome back " . $_SESSION["name"] . "!";
                                 echo "<a href='logout.php'>Logout</a></li>";

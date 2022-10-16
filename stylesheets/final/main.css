@@ -740,6 +740,12 @@ body {
   }
 }
 
+@media (max-width: 449px) {
+  .nav__message {
+    font-size: 14px;
+  }
+}
+
 .nav__links {
   display: flex;
   flex-direction: column;
