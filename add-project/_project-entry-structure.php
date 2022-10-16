@@ -61,7 +61,7 @@ if( $posts -> num_rows > 0 ){
                     </div>
                 </div>
             </div>
-            <div id ="comment-section" class="bg bg--comments">
+            <div id="comment-section" class="bg bg--comments"> this is where comments r supposed to be
                 <div class="section">
                     <div class="container">
                         <div class="comments a5-12 e8-12 h6-6">
@@ -121,6 +121,7 @@ if( $posts -> num_rows > 0 ){
         } }
     }
 } ?>
+
 <?php require "components/_footer.php" ?>
 
 </body>
