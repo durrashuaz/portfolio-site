@@ -44,12 +44,13 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 	// var_dump($commentID);
 
 	//find post associated with comment
-	$projectWithCommentID = mysqli_query($conn, "SELECT * FROM projects WHERE $postID = $commentID")
+	$projectWithCommentID = mysqli_query($conn, "SELECT * FROM projects WHERE id = $commentID")
 		or die("Query unsuccessful " . mysqli_error($conn));
+
 	if( $projectWithCommentID -> num_rows > 0 ){
 		while( $row = mysqli_fetch_assoc( $projectWithCommentID ) ){
-			echo $row['title']; 
-			$project_title= $row['title']; 
+			echo $row['title'];
+			$project_title = $row['title'];
 		}
 	}
 
