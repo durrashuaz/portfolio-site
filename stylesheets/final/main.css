@@ -1448,6 +1448,10 @@ a:hover {
 a:visited {
   color: initial;
 }
+.a .listing a,
+a .listing a {
+  text-decoration: underline;
+}
 
 .content-text {
   font-size: 22px;

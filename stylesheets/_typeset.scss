@@ -40,6 +40,11 @@ a {
     &:visited {
         color: initial;
     }
+    .listing {
+        a {
+            text-decoration: underline;
+        }
+    }
 }
 
 %content-text,
