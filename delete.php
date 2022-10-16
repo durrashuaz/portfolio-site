@@ -1,6 +1,6 @@
 <?php
 
-// include 'connect.php';
+include 'connect.php';
 
 //get hidden form inputs associated with delete request details
 if(isset($_POST['postID'])){ //if submitted delete form is a blog post
