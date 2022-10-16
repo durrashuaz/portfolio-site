@@ -33,7 +33,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 
 	//query successful
 	$previous_url = $_SERVER[HTTP_REFERER];
-	header('Location: ' . $previous_url .  '"' . );
+	header('Location: ' . $previous_url . );
 
 }
 
