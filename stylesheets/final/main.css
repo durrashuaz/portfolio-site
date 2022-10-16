@@ -1046,9 +1046,9 @@ body {
 .about-home {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .about-home img {
-  margin-top: -6rem;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -1164,6 +1164,11 @@ body {
   display: flex;
   position: relative;
   filter: grayscale(15%);
+}
+@media (max-width: 684px) {
+  .about-home__image {
+    margin-top: 4rem;
+  }
 }
 @media (min-width: 1751px) {
   .about-home__image img {

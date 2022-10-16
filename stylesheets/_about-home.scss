@@ -1,8 +1,8 @@
 .about-home {
     display: flex;
     justify-content: center;
+    align-items: center;
     img {
-        margin-top: -6rem;
         object-fit: contain;
 
     }
@@ -91,6 +91,9 @@ display: flex;
     display: flex;
     position: relative;
     filter: grayscale( 15% );
+    @media ( max-width: $f ) {
+        margin-top: 4rem;
+    }
     img {
         @media ( min-width: $x ) {
             width: 90%;
