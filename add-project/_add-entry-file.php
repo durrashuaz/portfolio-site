@@ -9,6 +9,7 @@ if( $posts -> num_rows > 0 ){
     while( $rows = mysqli_fetch_assoc( $posts ) ){
         $project_title = $rows['title'];
         $project_title = str_replace( " ", "-", $project_title );
+        $project_title = strtolower( $project_title );
         $myfile = fopen( "../" . $project_title . ".php", "x+" ) or die( "Unable to open file!" );
 
         $text = '<?php include "_project-entry-structure.php"; ?>';
