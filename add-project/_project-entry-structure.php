@@ -56,7 +56,7 @@ if( $posts -> num_rows > 0 ){
                                     </figure>
                                 </a>
                             </button>
-                            <img class="a6-12 d8-12 g6-6" src="<?php echo $_SESSION["image"]; ?>" alt="" width="" height="">
+                            <img class="a6-12 d8-12 g6-6" src="<?php echo $_SESSION['image']; ?>" alt="" width="" height="">
                         </div>
                     </div>
                 </div>
