@@ -53,8 +53,9 @@ if( $posts -> num_rows > 0 ){
                                 $image = mysqli_query( $conn, "SELECT * FROM images WHERE projectId = $id" )
                                 or die( "Query unsuccessful " . mysqli_error( $conn ) );
                                 if( $image -> num_rows > 0 ){
-                                while( $img_rows = mysqli_fetch_assoc( $image ) ){
-                                    echo '<img class="a6-12 d8-12 g6-6" src="' .  $img_rows["img_dir"] . '" alt="" width="" height="">';
+                                    while( $img_rows = mysqli_fetch_assoc( $image ) ){
+                                        echo '<img class="a6-12 d8-12 g6-6" src="' .  $img_rows["img_dir"] . '" alt="" width="" height="">';
+                                    }
                                 }
                             ?>
                         </div>
@@ -117,7 +118,7 @@ if( $posts -> num_rows > 0 ){
                     </div>
                 </div>
             </div>
-    <?php
+            <?php
         }
     }
 } ?>
