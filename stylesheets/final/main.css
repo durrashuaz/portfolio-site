@@ -611,6 +611,9 @@ body {
   overflow: hidden;
 }
 
+.bg--white {
+  background-color: #FFFFFF;
+}
 .bg--light {
   background-color: #EFEFEF;
 }
