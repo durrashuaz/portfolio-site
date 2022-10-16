@@ -1061,7 +1061,6 @@ body {
 }
 
 .about-home__code {
-  font-family: "Source Code Pro", monospace;
   font-size: 56px;
   line-height: 58px;
   margin-bottom: 0.25rem;
@@ -1291,6 +1290,9 @@ body {
   .section--about {
     height: initial;
   }
+}
+.section--fh {
+  height: calc(100vh - 136px);
 }
 
 .signUp-form {
@@ -1554,7 +1556,13 @@ a:visited {
   margin-bottom: 0.5rem;
 }
 
-.comments__item__comment,
+.comments__item {
+  border: 1px black solid;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: #EFEFEF;
+}
+
 .commentTextArea {
   border: black 1px solid;
   background-color: #EFEFEF;
