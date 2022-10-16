@@ -897,8 +897,8 @@ body {
 }
 @media (max-width: 838px) and (max-width: 449px) {
   .nav-open .nav__mobile .nav__mobile__footer li {
-    font-size: 22px;
-    line-height: 32px;
+    font-size: 14px;
+    line-height: 24px;
   }
 }
 @media (max-width: 838px) {
