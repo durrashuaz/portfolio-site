@@ -22,6 +22,8 @@
                         while( $rows = mysqli_fetch_assoc( $posts ) ){
                             $title_path = str_replace( " ", "-", $rows["title"] );
                             $title_path = $title_path . ".php";
+                            echo "got into while loop";
+                            echo $title_path;
                             if( file_exists( $title_path ) ) { //if post in db can be found in files
                                 echo
                                 "<tr>
