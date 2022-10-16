@@ -12,6 +12,12 @@
     border-radius: 0.5rem;
     padding: 1rem;
     background-color: $bg-comments-item;
+    .comments__item__username {
+        font-weight: 500;
+    }
+    .comments__item__time {
+        font-style: italic;
+    }
 }
 
 .commentTextArea {

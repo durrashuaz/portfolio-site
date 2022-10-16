@@ -1562,6 +1562,12 @@ a:visited {
   padding: 1rem;
   background-color: #f1f0ed;
 }
+.comments__item .comments__item__username {
+  font-weight: 500;
+}
+.comments__item .comments__item__time {
+  font-style: italic;
+}
 
 .commentTextArea {
   border: black 1px solid;
