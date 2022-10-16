@@ -1593,6 +1593,6 @@ a:visited {
 @media (max-width: 449px) {
   .listing th,
 .listing td {
-    font-size: 1rem;
+    font-size: 14px;
   }
 }
