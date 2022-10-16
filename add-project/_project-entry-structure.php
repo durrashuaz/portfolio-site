@@ -77,19 +77,19 @@ if( $posts -> num_rows > 0 ){
                                                     <p class="comments__item__time"><?php echo $commentRows["dateTime"]; ?></p>
                                                 </div>
                                                 <p class="comments__item__comment"><?php echo $commentRows["comment"]; ?></p>
-                                            <?php
-                                            //Delete comment button (admin)
-                                            $commentID= $commentRows["id"];
-                                            if(!isset($_SESSION)) {
-                                                session_start();
-                                            }
-                                            if( isset( $_SESSION["status"] ) ){
-                                                if( $_SESSION["status"] === "admin" ){
-                                            ?>
-                                                    <form class="comments__item__delete-button" method="POST" action="delete.php" class="deleteCommentForm">
-                                                    <input type="hidden" name="commentID" value="$commentID"/>
-                                                    <input type="submit" class="deleteButton" value="Delete comment">
-                                                    </form>
+                                                <?php
+                                                //Delete comment button (admin)
+                                                $commentID= $commentRows["id"];
+                                                if(!isset($_SESSION)) {
+                                                    session_start();
+                                                }
+                                                if( isset( $_SESSION["status"] ) ){
+                                                    if( $_SESSION["status"] === "admin" ){
+                                                ?>
+                                                <form class="comments__item__delete-button" method="POST" action="delete.php" class="deleteCommentForm">
+                                                <input type="hidden" name="commentID" value="$commentID"/>
+                                                <input type="submit" class="deleteButton" value="Delete comment">
+                                                </form>
                                             </div>
                                             <?php
                                                 }
@@ -121,7 +121,6 @@ if( $posts -> num_rows > 0 ){
         } }
     }
 } ?>
-</div>
 <?php require "components/_footer.php" ?>
 
 </body>
