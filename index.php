@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div class="about-home__image x3-12">
-                    <img class="" src="../images/durra.png" alt="Durra" width="366" height="">
+                    <img class="" src="../images/profile.png" alt="Durra" width="366" height="">
                     <div class="about-home__image__socials">
                     <a href="files/durra-cv.pdf" target="_blank">
                             <span class="icon-profile"></span>
