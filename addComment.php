@@ -57,8 +57,6 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 	$project_title = strtolower( $project_title );
 	$project_url= $project_title . '.php';
 
-	echo $project_url;
-
 	//query successful
 	header('Location: ' . $project_url );
 
