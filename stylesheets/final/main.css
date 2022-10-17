@@ -621,7 +621,7 @@ body {
   background-color: #f8b04a;
 }
 .bg--comments {
-  background-color: #25a947;
+  background-color: #a4ebb3;
 }
 .bg--lines1 {
   background-image: url("../../images/lines1.png ");
@@ -818,7 +818,7 @@ body {
 }
 .nav__inner .nav__burger {
   display: none;
-  background-color: #ad2314;
+  background-color: #25a947;
   height: 46px;
   width: 46px;
   margin-bottom: 1rem;
