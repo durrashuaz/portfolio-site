@@ -1,6 +1,6 @@
 <?php require 'components/_head-header.php'?>
 
-<div class='bg bg--light bg--lines1'>
+<div class='bg bg--light'>
     <div class='section section--fh'>
         <div class='container'>
             <h1 class="h1 mb-40">Projects</h1>
