@@ -31,9 +31,15 @@ li {
 
 a {
     color: initial;
-    text-decoration: none;
     &:visited {
         color: initial;
+    }
+}
+
+a {
+    .footer &,
+    .about-home__image__socials & {
+        text-decoration: none;
     }
 }
 

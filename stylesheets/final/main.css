@@ -591,10 +591,13 @@ li {
 
 a {
   color: initial;
-  text-decoration: none;
 }
 a:visited {
   color: initial;
+}
+
+.footer a, .about-home__image__socials a {
+  text-decoration: none;
 }
 
 th {
