@@ -6,6 +6,14 @@
 
 .footer__inner {
     @extend %container-header;
+    ul {
+        li {
+            margin-bottom: 0.5rem;
+            @media( max-width: $h ) {
+                margin-bottom: 0;
+            }
+        }
+    }
 }
 
 .footer__secondary {

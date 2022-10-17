@@ -942,6 +942,15 @@ body {
   line-height: 32px;
 }
 
+.footer__inner ul li {
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 449px) {
+  .footer__inner ul li {
+    margin-bottom: 0;
+  }
+}
+
 .footer__secondary {
   font-size: 14px;
 }
@@ -1621,13 +1630,15 @@ a:visited {
 }
 
 .listing th,
-.listing td {
+.listing td,
+.listing p {
   padding-bottom: 1rem;
   font-size: 20px;
 }
 @media (max-width: 449px) {
   .listing th,
-.listing td {
+.listing td,
+.listing p {
     font-size: 14px;
   }
 }
