@@ -39,7 +39,7 @@ if( $first_url_segment === "index.php" || $first_url_segment === "" ) {
 ?>
     <header class="nav">
         <nav class="nav__inner">
-            <a href="/"><img class="nav__logo" src="../images/logo.png" alt="logo" width="147" height="76"></a>
+            <a href="/"><img class="nav__logo" src="../images/logo.png" alt="logo" width="141" height="76"></a>
             <div class="nav__links a5-12">
                 <ul class="nav__primary flex">
                     <li><a href="~/../portfolio.php">Portfolio</a></li>
