@@ -1,6 +1,6 @@
 <?php require 'components/_head-header.php' ?>
 
-<div class="bg bg--feature">
+<div class="bg bg--featured">
     <div class="section section--about">
         <div class="container">
             <div class="about-home">

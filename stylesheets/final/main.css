@@ -1128,7 +1128,7 @@ body {
   line-height: 32px;
 }
 .about-home__summary a {
-  color: #ad2314;
+  color: #000000;
 }
 @media (min-width: 1751px) {
   .about-home__summary {
@@ -1436,7 +1436,7 @@ body {
 
 .a,
 a {
-  color: #ad2314;
+  color: #000000;
 }
 .a:hover,
 a:hover {
