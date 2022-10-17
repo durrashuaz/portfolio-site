@@ -32,7 +32,7 @@
                             }
                         }
                     echo "</table>";
-                    echo "<p>More entries coming soon!</p>"
+                    echo "<p>More entries coming soon!</p>";
                 }
             ?>
             </div>
