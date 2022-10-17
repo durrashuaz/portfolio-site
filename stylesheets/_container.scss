@@ -26,7 +26,7 @@
 }
 
 %container-header {
-    padding: 1.75rem $container-side-padding;
+    padding: 1.75rem $container-side-padding 1.5rem;
     @media( max-width: $g ) {
         padding: 1.75rem $container-side-padding--g;
     }
