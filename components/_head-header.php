@@ -6,14 +6,14 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-   <meta charset="utf-8">
+    <title>Durra Shuazlan</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta property="og:image" content="https://durrashuazlan.com/images/logo.png" />
    <meta name="og:description" content="Durra Shuazlan's portfolio website consisting of project and blog entries.">
-   <title>Durra Shuazlan</title>
    <link rel="stylesheet" href="../stylesheets/final/main.css"/>
    <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,400&display=swap');</style>
    <!-- <style>@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');</style> -->
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
@@ -100,3 +100,11 @@ if( $first_url_segment === "index.php" || $first_url_segment === "" ) {
     include '_login.html';
     include '_signUp.html';
 ?>
+
+<script type="application/ld+json">
+    {"@context" : "http://schema.org",
+    "@type" : "Computer Scientist", 
+    "name" : "Durra Shuazlan",
+    "url" : "https://www.durrashuazlan.com",
+    "logo": "https://durrashuazlan.com/images/logo.png" }
+</script>

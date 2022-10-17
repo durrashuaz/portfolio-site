@@ -18,7 +18,7 @@ if( $first_url_segment === "index.php" || $first_url_segment === "" ) {
                     </ul>
                     <ul class="grid__item">
                         <li><a href="https://www.linkedin.com/in/durra-shuazlan-57b688195/?originalSubdomain=uk" target="_blank">LinkedIn</a></li>
-                        <li><a href="https://github.com/durrashuaz" target="_blank">GitHub</li>
+                        <li><a href="https://github.com/durrashuaz" target="_blank">GitHub</a></li>
                     </ul>
                 </div>
                 <div class="footer__secondary">&copy; September 27, 2022</div>
