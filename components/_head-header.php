@@ -87,7 +87,7 @@ if( $first_url_segment === "index.php" || $first_url_segment === "" ) {
                         View my CV
                     </a></li>
                     <li><a href="tel:+447307479096">+44(0)7307479096</a></li>
-                    <li><a href="mailto:durrao.brien@gmail.com">durrao.brien@gmail.com</a></li>
+                    <li><a href="mailto:contact@durrashuazlan.com">contact@durrashuazlan.com</a></li>
                     <li><a href="https://www.linkedin.com/in/durra-shuazlan-57b688195/?originalSubdomain=uk" target="_blank">LinkedIn</a></li>
                     <li><a href="https://github.com/durrashuaz" target="_blank">GitHub</a></li>
                 </ul>
