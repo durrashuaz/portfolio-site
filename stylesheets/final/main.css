@@ -733,6 +733,7 @@ body {
 .nav {
   display: flex;
   width: 100%;
+  background-color: #f1e4b9;
 }
 
 @media (max-width: 449px) {
