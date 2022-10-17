@@ -1,6 +1,6 @@
 .nav {
     display: flex;
-    border-bottom: 1px solid $color-outline;
+    
     width: 100%;
 }
 
@@ -130,7 +130,6 @@
         }
     }
     .nav-open & {
-        border: 0;
         background-color: $white;
         z-index: 2;
     }
@@ -191,7 +190,6 @@
             z-index: 2;
         }
         .nav__inner {
-            border: 0;
             background-color: $color-nav;
             width: unset;
         }
