@@ -8,7 +8,7 @@
 <head lang="en">
    <meta charset="utf-8">
    <meta property="og:image" content="https://durrashuazlan.com/images/logo.png" />
-   <meta name="description" content="Durra Shuazlan's portfolio website consisting of project and blog entries.">
+   <meta name="og:description" content="Durra Shuazlan's portfolio website consisting of project and blog entries.">
    <title>Durra Shuazlan</title>
    <link rel="stylesheet" href="../stylesheets/final/main.css"/>
    <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,400&display=swap');</style>
