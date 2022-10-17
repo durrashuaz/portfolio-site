@@ -621,7 +621,7 @@ body {
   background-color: #f8b04a;
 }
 .bg--comments {
-  background-color: #f8b04a;
+  background-color: #25a947;
 }
 .bg--lines1 {
   background-image: url("../../images/lines1.png ");
@@ -733,7 +733,6 @@ body {
 .nav {
   display: flex;
   width: 100%;
-  background-color: #f1e4b9;
 }
 
 @media (max-width: 449px) {
@@ -1595,7 +1594,7 @@ a:visited {
   border: 1px black solid;
   border-radius: 0.5rem;
   padding: 1rem;
-  background-color: #f1f0ed;
+  background-color: #FFFFFF;
 }
 .comments__item .comments__item__username {
   font-weight: 500;
