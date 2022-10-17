@@ -2,7 +2,7 @@
 if( $first_url_segment === "index.php" || $first_url_segment === "" ) {
     echo "<footer class='bg bg--light'>";
 } else {
-    echo "footer class='bg bg--featured'>";
+    echo "<footer class='bg bg--featured'>";
 }
 ?>
     <div class="footer__inner">
