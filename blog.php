@@ -1,6 +1,6 @@
 <?php require 'components/_head-header.php' ?>
 
-<div class='bg bg--light bg--lines1'>
+<div class='bg bg--light'>
     <div class='section section--fh'>
         <div class='container'>    
             No blog entries at the moment. Check out <a class="a" href="/portfolio.php">Portfolio entries.</a>

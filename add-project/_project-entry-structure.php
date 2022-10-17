@@ -24,7 +24,7 @@ if( $posts -> num_rows > 0 ){
             $content = $rows["content"];
             $date = $rows["date"];
             ?>
-            <div class="bg bg--light bg--lines1">
+            <div class="bg bg--light">
                 <div class="section">
                     <div class="container">
                         <div class="flex flex--justify-space-between flex--wrap">
